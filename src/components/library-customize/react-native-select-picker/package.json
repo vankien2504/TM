@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-select-picker",
+        "scope": null,
+        "escapedName": "react-native-select-picker",
+        "name": "react-native-select-picker",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "F:\\React Native\\testComponent\\TestComponent"
+    ]
+  ],
+  "_from": "react-native-select-picker@latest",
+  "_id": "react-native-select-picker@0.0.3",
+  "_inCache": true,
+  "_location": "/react-native-select-picker",
+  "_nodeVersion": "8.7.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-select-picker-0.0.3.tgz_1510920020910_0.3930778270587325"
+  },
+  "_npmUser": {
+    "name": "hlerenow",
+    "email": "595806119@qq.com"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-select-picker",
+    "scope": null,
+    "escapedName": "react-native-select-picker",
+    "name": "react-native-select-picker",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-select-picker/-/react-native-select-picker-0.0.3.tgz",
+  "_shasum": "e2289d862cf3e8f2df61511340271aeb272ab314",
+  "_shrinkwrap": null,
+  "_spec": "react-native-select-picker",
+  "_where": "F:\\React Native\\testComponent\\TestComponent",
+  "author": {
+    "name": "hlere"
+  },
+  "bugs": {
+    "url": "https://github.com/hlerenow/react-native-select-picker/issues"
+  },
+  "dependencies": {},
+  "description": "A useful select picker, help you finish you app fast.",
+  "devDependencies": {},
+  "directories": {
+    "example": "example"
+  },
+  "dist": {
+    "integrity": "sha512-G7T8wcGrGUJNpK1ThKJ6Q1ETRCBaWXvwp4Mz0cBV9mBjAHQd3gKFg4PTLR+lirNbrgY0VBYSkPDzj/oYw5NXvw==",
+    "shasum": "e2289d862cf3e8f2df61511340271aeb272ab314",
+    "tarball": "https://registry.npmjs.org/react-native-select-picker/-/react-native-select-picker-0.0.3.tgz"
+  },
+  "gitHead": "857d9b63b9047f63a0ec24ac90cebec9bc2c867a",
+  "homepage": "https://github.com/hlerenow/react-native-select-picker#readme",
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "datetime",
+    "picker",
+    "select",
+    "scroll"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "hlerenow",
+      "email": "595806119@qq.com"
+    }
+  ],
+  "name": "react-native-select-picker",
+  "optionalDependencies": {},
+  "readme": "[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()\n[![Version](https://img.shields.io/npm/v/react-native-select-picker.svg)](https://www.npmjs.com/package/react-native-select-picker)\n[![npm](https://img.shields.io/npm/dt/react-native-select-picker.svg)](https://www.npmjs.com/package/react-native-select-picker)\n\n# react-native-select-picker\n\n A useful select picker, help you finish you app fast.\n\n### Demo\n![demo](./demo.gif)\n\n### Install\n\n```\nnpm install react-native-select-picker --save\n```\n\n\n### Usage \n\n```\nimport {SelectPicker, DatePicker} from 'react-native-select-picker';\n\nimport React, { Component } from 'react';\nimport {\n  StyleSheet,\n  Text,\n  View,\n  TouchableOpacity\n} from 'react-native';\n\nexport default class App extends Component<{}> {\n\n  constructor (props) {\n    super(props);\n    this.state = {\n      date: {},\n      picker: ''\n    }\n  }\n\n  componentDidMount () {\n    this.DatePicker.show();\n  }\n\n  valChange  = (item, index) => {\n    console.log('值改变', item, index);\n    this.setState({\n      picker: item\n    })\n  }\n\n  dateValChange = (year,month, day, hour, minute) => {\n    console.log({year,month, day, hour, minute});\n    var dateObj = {year,month, day, hour, minute};\n    this.setState({\n      date:dateObj\n    });\n  }\n\n  render() {\n    var {date, picker} = this.state;\n    console.log(this.state, 111);\n    var date = JSON.stringify(date);\n\n    return (\n      <View style={styles.container}>\n        <Text>\n          date: {date}\n        </Text>\n        <Text>\n          picker: {picker}\n        </Text>\n        <TouchableOpacity style={{backgroundColor: 'orange', padding: 10}} onPress={() => this.DatePicker.show()}>\n          <Text>open DatePicker</Text>\n        </TouchableOpacity>\n        <SelectPicker \n          onValueChange={this.valChange}\n        />\n        <DatePicker ref={(ref) => this.DatePicker = ref}\n          ok= {this.dateValChange}\n        />\n\n      </View>\n    );\n  }\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1\n  },\n  welcome: {\n    fontSize: 20,\n    textAlign: 'center',\n    margin: 10,\n  },\n  instructions: {\n    textAlign: 'center',\n    color: '#333333',\n    marginBottom: 5,\n  },\n});\n```\n\n#### SelectPicker Config\n\nJust a select picker.\n\n|prop         |type           |defaut                      |description                              |\n|:----------   |:---------------|:-------------               |:-----------------------------------------|\n|wrapHeight   |Number         |300                         | The height of picker container          |\n|wrapWidth    |Number or null |null                        | The width of picker container, if the value is 'null', the wrapWidth is the parent's width, if the parent is root element, the wrapWidth is screen width|\n|itemHeigh    |Number         |100                         | The height of item heiht, which can be selett|\n|fontColor    |String         | '#444’                     | Font color |\n|borderStyle  |Object         | {}                         | Border style |\n|maskercolor  |String         | 'rgba(255, 255, 255, 0.5)' | The mask color of SelectPicker|\n|data         |Array          | [1,2,3,4,5,6,7]            | the picker list items |\n|onValueChange|Function       | function (item, index)     | When select picker value  change, this function will be call|\n\n#### DatePicker Config\n\nA date picker.\n\n|prop         |type           |defaut                      |description                              |\n|:----------   |:---------------|:-------------               |:-----------------------------------------|\n|defaultTime  |Date Object    |new Date()                  |The default DateTime                    |\n|title        |String         |'选择时间'                   |topBar text |\n|titleStyle    |Object         |{}                      | ---|\n|okText       |String         | '确定'                     | the right button text|\n|okTextStyle  |Object         | {}                         | ---- |\n|okBtnBgColor  |String         | 'rgba(255, 255, 255, 0.5)' | ----|\n|cancelText       |String         | '取消'                     | the left button text|\n|cancelTextStyle  |Object         | {}                         | ---- |\n|cancelBtnBgColor  |String         | 'rgba(255, 255, 255, 0.5)' | ----|\n|ok                | Function | function (year, month, day, ,hour, minute) {} | When click ok button, this function will be call.|\n|cancel                | Function | function () {} | When click cancel button, DatePicker will be hidden. and you can do some thing in this function|\n|customTopBar | Component Function | function (ok, cancel) {return null;} |You can custom topBar use this prop, return a React Component, args 'ok'  and 'cancel'  are function ,just like props 'ok' and 'cancel' |\n\n#### DatePicker Methods\n\n##### show()\nyou use this method to open DatePicker.\n\nExample \n```\ncomponentDidMount () {\n   this.DatePicker.show();\n}\n\n<DatePicker ref={(ref) => this.DatePicker = ref}\n  ok= {this.dateValChange}\n/>\n```\n\n#### Final\n Good Luck!  \n :)\n\n### License \nMIT",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hlerenow/react-native-select-picker.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.3"
+}

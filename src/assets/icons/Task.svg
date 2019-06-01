@@ -1,0 +1,6 @@
+<svg id="Document" xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21">
+  <path id="Shape" d="M17.5,21H1.5A1.5,1.5,0,0,1,0,19.5V6A1.507,1.507,0,0,1,.73,4.71l4-4A1.492,1.492,0,0,1,6,0H17.5A1.5,1.5,0,0,1,19,1.5v18A1.5,1.5,0,0,1,17.5,21ZM1.5,6.05V19.5h16L17.48,1.52H6.03v.03L6,1.58V6.02H1.56l-.03.03Zm3-2.99L3.06,4.5H4.5Z" transform="translate(0 0)" fill="#5d5d5d"/>
+  <path id="Shape-2" data-name="Shape" d="M10.75,0H.75a.75.75,0,0,0,0,1.5h10a.75.75,0,0,0,0-1.5Z" transform="translate(3.75 11.5)" fill="#5d5d5d"/>
+  <path id="Shape-3" data-name="Shape" d="M9.25,0H.75a.75.75,0,0,0,0,1.5h8.5a.75.75,0,0,0,0-1.5Z" transform="translate(3.75 15)" fill="#5d5d5d"/>
+  <path id="Shape-4" data-name="Shape" d="M4.5,6h-3A1.5,1.5,0,0,1,0,4.5v-3A1.5,1.5,0,0,1,1.5,0h3A1.5,1.5,0,0,1,6,1.5v3A1.5,1.5,0,0,1,4.5,6Zm-3-4.5v3h3v-3Z" transform="translate(9.5 3.5)" fill="#5d5d5d"/>
+</svg>

@@ -1,0 +1,24 @@
+{
+    "editor.formatOnSave": true,
+    "svn.delete.ignoredRulesForDeletedFiles": [
+        "android\\app\\build\\intermediates\\incremental\\debug-mergeJavaRes\\zip-cache\\vQy1ZRei6isEr731Ijs595w2Qwc=",
+        "android\\app\\build\\intermediates\\incremental\\debug-mergeJavaRes\\zip-cache\\zOZ+7mek0lbvtOEshEw2In72J4w=",
+        "android\\app\\build\\intermediates\\incremental\\debug-mergeJniLibs\\zip-cache\\vQy1ZRei6isEr731Ijs595w2Qwc=",
+        "android\\app\\build\\intermediates\\incremental\\debug-mergeJniLibs\\zip-cache\\zOZ+7mek0lbvtOEshEw2In72J4w=",
+        "android\\app\\build\\intermediates\\incremental\\packageDebug\\tmp\\debug\\zip-cache\\RB9++Txd7pTiXB9LCPjMsMMG6So=",
+        "android\\app\\build\\intermediates\\incremental\\packageDebug\\tmp\\debug\\zip-cache\\g1COtnvOh0vaq6mA9rSq3miN01k=",
+        "android\\app\\build\\intermediates\\transforms\\dexBuilder\\debug\\31.jar",
+        "android\\app\\build\\intermediates\\transforms\\dexBuilder\\debug\\32",
+        "android\\app\\build\\intermediates\\transforms\\dexBuilder\\debug\\33.jar",
+        "android\\app\\build\\intermediates\\transforms\\dexBuilder\\debug\\35.jar",
+        "android\\.idea\\.name",
+        "android\\.idea\\caches",
+        "android\\.idea\\codeStyles",
+        "android\\.idea\\libraries",
+        "android\\.idea\\modules.xml",
+        "android\\.idea\\runConfigurations.xml",
+        "android\\.idea\\vcs.xml"
+    ],
+    "debug.node.autoAttach": "off",
+    "workbench.list.multiSelectModifier": "alt"
+}

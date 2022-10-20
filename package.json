@@ -30,7 +30,7 @@
     "react-native-nav-tabbar": "0.0.2",
     "react-native-optimized-flatlist": "^1.0.4",
     "react-native-progress": "^3.5.0",
-    "react-native-reanimated": "^1.0.0-alpha.12",
+    "react-native-reanimated": "^2.10.0",
     "react-native-remote-svg": "^1.4.0",
     "react-native-search-box-custom": "0.0.13",
     "react-native-searchable-dropdown": "^1.0.6",
